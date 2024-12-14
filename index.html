@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometric Graphical Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </link>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+    <div class="w-full max-w-6xl p-6 bg-white rounded-lg shadow-md">
+        <h1 class="text-2xl font-bold mb-4 text-center">Trigonometric Graphical Calculator</h1>
+        <div class="mb-4">
+            <label for="angle" class="block text-gray-700">Enter Angle (in degrees, max 360):</label>
+            <input type="number" id="angle" max="360"
+                class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div class="flex justify-center mb-4">
+            <button id="plotButton" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Plot
+                Graphs</button>
+        </div>
+        <div class="flex justify-center mb-4">
+            <label for="inverse" class="mr-2 text-gray-700">Inverse:</label>
+            <input type="checkbox" id="inverse" class="form-checkbox h-5 w-5 text-blue-600">
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="h-96">
+                <h2 id="sineHeading" class="text-center font-semibold">Sine</h2>
+                <canvas id="sineChart" class="h-full"></canvas>
+            </div>
+            <div class="h-96">
+                <h2 id="cosineHeading" class="text-center font-semibold">Cosine</h2>
+                <canvas id="cosineChart" class="h-full"></canvas>
+            </div>
+            <div class="h-96">
+                <h2 id="tangentHeading" class="text-center font-semibold">Tangent</h2>
+                <canvas id="tangentChart" class="h-full"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
