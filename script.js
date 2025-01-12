@@ -109,7 +109,4 @@ function plotGraphs() {
 
     document.getElementById('sineHeading').innerText = isInverse ? 'Cosecant' : 'Sine';
     document.getElementById('cosineHeading').innerText = isInverse ? 'Secant' : 'Cosine';
-    document.getElementById('tangentHeading').innerText = isInverse ? 'Cotangent' : 'Tangent';
-}
-
-document.getElementById('plotButton').addEventListener('click', plotGraphs);
+    document.getElementById('
